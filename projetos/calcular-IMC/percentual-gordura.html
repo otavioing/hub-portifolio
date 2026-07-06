@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>percentual gordura</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/percentual-gordura.css">
+    <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
+
+</head>
+
+<body>
+
+
+    <header class="header">
+        <div class="logo" id="logo">
+            <img src="img/logo.svg" alt="Logo da Calculadora de IMC">
+            <h1>Health<span style="color: #10B77F;">Metric</span></h1>
+        </div>
+
+        <!-- <div class="menu-toggle">
+            ☰
+        </div>
+
+
+        <nav>
+            <a href="index.html" style="color: #10B77F;">Início</a>
+            <a href="#">Contato</a>
+            <a href="sobre.html">Sobre</a>
+        </nav> -->
+
+    </header>
+
+    <div class="container">
+
+        <div class="main-header">
+            <h1>Calculadora de Gordura Corporal</h1>
+            <p>Método da Marinha dos EUA (US Navy Method)</p>
+        </div>
+
+        <div class="grid">
+
+            <!-- LADO ESQUERDO -->
+            <div class="card form-card">
+
+                <form id="bodyFatForm">
+
+                    <h3>GÊNERO</h3>
+
+                    <div class="gender-buttons">
+
+                        <label class="gender-option">
+                            <input type="radio" name="sexo" value="masculino" checked>
+                            <span>♂ Masculino</span>
+                        </label>
+
+                        <label class="gender-option">
+                            <input type="radio" name="sexo" value="feminino">
+                            <span>♀ Feminino</span>
+                        </label>
+
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="input-group">
+                            <label>Idade (anos)</label>
+                            <input type="number" name="idade" placeholder="Ex: 28" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Peso (kg)</label>
+                            <input type="number" name="peso" placeholder="Ex: 82.5" required>
+                        </div>
+
+                        <div class="input-group full">
+                            <label>Altura (cm)</label>
+                            <input type="number" name="altura" placeholder="Ex: 178" required>
+                        </div>
+                    </div>
+
+                    <h3>MEDIDAS CORPORAIS (CM)</h3>
+
+                    <div class="form-grid">
+                        <div class="input-group">
+                            <label>Pescoço</label>
+                            <input type="number" name="pescoco" placeholder="Ex: 38" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Cintura</label>
+                            <input type="number" name="cintura" placeholder="Ex: 88" required>
+                        </div>
+
+                        <div class="input-group quadril-group" style="display: none;">
+                            <label>Quadril</label>
+                            <input type="number" name="quadril" placeholder="Ex: 95">
+                        </div>
+                    </div>
+
+
+                    <button type="submit" class="primary-btn">
+                        Calcular Percentual
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- LADO DIREITO -->
+            <div class="card result-card">
+
+                <h4>SEU RESULTADO</h4>
+
+                <div class="result-percentage">
+                    00.0<span>%</span>
+                </div>
+
+                <div class="badge">Categoria: Fitness</div>
+
+                <div class="bar">
+                    <div class="progress"></div>
+                </div>
+
+                <p class="info-text">
+                    Você está no top 15% para sua faixa etária.
+                </p>
+
+                <div class="metrics">
+                    <div>
+                        <span>Massa Magra</span>
+                        <strong>00.0 kg</strong>
+                    </div>
+                    <div>
+                        <span>Massa Gorda</span>
+                        <strong>00.0 kg</strong>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script/header.js"></script>
+    <script src="script/percentual-gordura.js"></script>
+
+</body>
+
+</html>

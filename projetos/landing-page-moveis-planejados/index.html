@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="containerlogo">
+            <img src="img/Logo_lorem.png" alt="">
+        </div>
+
+        <div class="menuhamburguer" id="btnMenu">
+            <div class="linha"></div>
+            <div class="linha"></div>
+            <div class="linha"></div>
+        </div>
+
+        <nav class="containerlinkssite" id="menuLinks">
+            <ul class="linkssite">
+                <li class="linkesite"><a href="#inicio">início</a></li>
+                <li class="linkesite"><a href="#servicos">Serviços</a></li>
+                <li class="linkesite"><a href="#projetos">Projetos</a></li>
+                <li class="linkesite"><a href="#localizacao">Localização</a></li>
+                <li class="linkesite"><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+
+        
+
+
+    </header>
+
+    <main>
+
+        <section id="inicio" class="inicio">
+            <div class="slides">
+
+                <div class="slide">
+                    <img src="img/fundo_cidade_tecnologica.jpg" alt="">
+                </div>
+
+                <div class="slide">
+                    <img src="img/fundo_cidade_tecnologica.jpg" alt="">
+                </div>
+
+                <div class="slide">
+                    <img src="img/fundo_cidade_tecnologica.jpg" alt="">
+                </div>
+
+            </div>
+
+            <!-- Botões -->
+            <button class="btn prev">&#10094;</button>
+            <button class="btn next">&#10095;</button>
+        </section>
+
+
+        <section id="servicos" class="servicos">
+
+
+            <div class="esquerda">
+                <div class="titulo">
+                    <h2>Nossos Serviços</h2>
+                </div>
+                <div class="nossosservicosdesc">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nulla
+                        illum consectetur explicabo inventore unde velit voluptate exercitationem sed asperiores sint
+                        beatae possimus blanditiis perspiciatis quis ullam earum, consequatur labore.
+                        Neque at maiores ea sequi consequatur laudantium fugit hic sed modi, optio reprehenderit iusto
+                        cum laborum labore voluptas illum tempore explicabo repellendus quod! Delectus cum cumque, esse
+                        reiciendis sed laudantium.
+                        Provident optio iste ad nam ullam et dicta culpa architecto doloremque quis deserunt ipsum
+                        pariatur possimus, fugit deleniti amet dignissimos sed obcaecati sequi molestias est illo non.
+                        Iusto, amet temporibus?</p>
+                </div>
+            </div>
+            <div class="direita">
+
+                <div class="containercards">
+
+                    <div class="card">
+
+                        <div class="imagem">
+                            <img src="img/phone_callback.svg" alt="">
+                        </div>
+                        <div class="nomeservico">
+                            <h3>Serviço 1</h3>
+                        </div>
+                        <div class="barra"></div>
+                        <div class="descricao">
+                            <p>Lorem ipsum dolor sit amet consectetur</p>
+                        </div>
+
+                    </div>
+                    <div class="card">
+
+                        <div class="imagem">
+                            <img src="img/phone_callback.svg" alt="">
+                        </div>
+                        <div class="nomeservico">
+                            <h3>Serviço 1</h3>
+                        </div>
+                        <div class="barra"></div>
+                        <div class="descricao">
+                            <p>Lorem ipsum dolor sit amet consectetur</p>
+                        </div>
+
+                    </div>
+                    <div class="card">
+
+                        <div class="imagem">
+                            <img src="img/phone_callback.svg" alt="">
+                        </div>
+                        <div class="nomeservico">
+                            <h3>Serviço 1</h3>
+                        </div>
+                        <div class="barra"></div>
+                        <div class="descricao">
+                            <p>Lorem ipsum dolor sit amet consectetur</p>
+                        </div>
+
+                    </div>
+                    <div class="card">
+
+                        <div class="imagem">
+                            <img src="img/phone_callback.svg" alt="">
+                        </div>
+                        <div class="nomeservico">
+                            <h3>Serviço 1</h3>
+                        </div>
+                        <div class="barra"></div>
+                        <div class="descricao">
+                            <p>Lorem ipsum dolor sit amet consectetur</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <section id="projetos" class="projetos">
+
+            <div class="tituloprojetos">
+                <h2>Nossos Projetos</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam vero ipsum eos reprehenderit fugiat,
+                    nesciunt veritatis impedit veniam unde quis rerum quas neque aperiam officia magnam facere porro et
+                    itaque?</p>
+            </div>
+
+            <div class="botoesprojetos">
+                <button id="botaoprojeto1" class="ativo" onclick="mostrarProjeto(1)">projeto 1</button>
+                <div class="barravertical"></div>
+                <button id="botaoprojeto2" onclick="mostrarProjeto(2)">projeto 2</button>
+                <div class="barravertical"></div>
+                <button id="botaoprojeto3" onclick="mostrarProjeto(3)">projeto 3</button>
+                <div class="barravertical"></div>
+                <button id="botaoprojeto4" onclick="mostrarProjeto(4)">projeto 4</button>
+            </div>
+
+            <div id="projeto1" style="display: block;">
+
+                <div class="exibirprojetos">
+
+                    <div class="cardprojeto">
+                        <img src="img/projeto 1.jpg" alt="">
+                    </div>
+                    <div class="cardprojeto">
+                        <img src="img/projeto 2.jpg" alt="">
+                    </div>
+                    <div class="cardprojeto">
+                        <img src="img/projeto 3.jpg" alt="">
+                    </div>
+
+                </div>
+
+            </div>
+            <div id="projeto2" style="display: none;">
+
+                <div class="exibirprojetos">
+
+                    <div class="cardprojeto">
+                        <img src="img/projeto 4.jpg" alt="">
+                    </div>
+                    <div class="cardprojeto">
+                        <img src="img/projeto 5.jpg" alt="">
+                    </div>
+                    <div class="cardprojeto">
+                        <img src="img/projeto 6.jpg" alt="">
+                    </div>
+
+                </div>
+
+            </div>
+            <div id="projeto3" style="display: none;">
+
+                <div class="exibirprojetos">
+
+                    <div class="cardprojeto">
+                        <img src="img/projeto 7.jpg" alt="">
+                    </div>
+                    <div class="cardprojeto">
+                        <img src="img/projeto 8.jpg" alt="">
+                    </div>
+                    <div class="cardprojeto">
+                        <img src="img/projeto 9.jpg" alt="">
+                    </div>
+
+                </div>
+
+            </div>
+            <div id="projeto4" style="display: none;">
+
+                <div class="exibirprojetos">
+
+                    <div class="cardprojeto">
+                        <img src="img/projeto 10.jpg" alt="">
+                    </div>
+                    <div class="cardprojeto">
+                        <img src="img/projeto 11.jpg" alt="">
+                    </div>
+                    <div class="cardprojeto">
+                        <img src="img/projeto 12.jpg" alt="">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+        <section id="localizacao" class="localizacao">
+
+            <div class="titulolocalizacao">
+                <h2>Nossa Localização</h2>
+            </div>
+
+            <div class="mapa">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.4862639536593!2d-46.65641962445687!3d-23.564068984686254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c6f5f5f5f5%3A0x5e5e5e5e5e5e5e5e!2sAv.%20Paulista%2C%201000%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-100%2C%20Brasil!5e0!3m2!1spt-BR!2sus!4v1616161616161!5m2!1spt-BR!2sus"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
+            <div class="endereco">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum laborum, recusandae numquam eligendi
+                    veniam dolorum quam ducimus quisquam! Doloremque consequatur temporibus illo soluta provident qui
+                    perspiciatis repudiandae quasi, sit ratione?
+                </p>
+            </div>
+
+        </section>
+
+        <section id="contato" class="contato">
+
+            <div class="info-loja">
+
+                <div class="headerform">
+                    <h2>Visite Nossa Loja</h2>
+                </div>
+
+                <div class="container">
+
+                    <div class="item-info">
+                        <!-- Ícone Local -->
+                        <img class="icone-info" src="img/location.svg" alt="">
+
+                        <div>
+                            <h3>Endereço</h3>
+                            <p
+                                onclick="copiarTexto('Rua Principal, 458\nCentro - São José do Interior\nCEP 12345-678')">
+                                Rua Principal, 458<br>
+                                Centro - São José do Interior<br>
+                                CEP 12345-678</p>
+                        </div>
+                    </div>
+
+                    <div class="item-info">
+                        <!-- Ícone Telefone -->
+                        <img class="icone-info" src="img/call.svg" alt="">
+
+                        <div>
+                            <h3>Telefone</h3>
+                            <p onclick="copiarTexto('(11) 3456-7890')">(11) 3456-7890</p>
+                            <p onclick="copiarTexto('(11) 98765-4321')">(11) 98765-4321</p>
+                        </div>
+                    </div>
+
+                    <div class="item-info">
+                        <!-- Ícone Email -->
+                        <img class="icone-info" src="img/mail.svg" alt="">
+
+                        <div>
+                            <h3>E-mail</h3>
+                            <p onclick="copiarTexto('contato@gmail.com.br')">contato@gmail.com.br</p>
+                        </div>
+                    </div>
+
+                    <div class="item-info">
+                        <!-- Ícone Relógio -->
+                        <img class="icone-info" src="img/timer.svg" alt="">
+
+                        <div>
+                            <h3>Horário de Atendimento</h3>
+                            <p>Segunda a Sexta: 7h às 18h<br>
+                                Sábado: 7h às 12h</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <form id="meuForm" class="meuForm">
+                <div class="headerform">
+                    <h2>Envie sua mensagem</h2>
+                </div>
+                <div class="inputs-topo">
+                    <input class="input-text" type="text" name="nome" placeholder="Seu nome">
+                    <input class="input-email" type="email" name="email" placeholder="Seu email">
+                    <input class="input-tel" type="tel" name="telefone" placeholder="Seu telefone">
+                </div>
+                <textarea class="input-textarea" name="mensagem" placeholder="Sua mensagem"></textarea>
+                <button type="submit" class="btn-enviar">Enviar</button>
+                <p id="msg" class="msg"></p>
+            </form>
+
+        </section>
+
+
+        <a href="https://wa.me/5511999999999" class="whatsapp-fixo" target="_blank">
+            <img src="img/whatsapp.png" alt="WhatsApp" class="whatsapp-icon">
+        </a>
+
+
+
+    </main>
+
+    <footer>
+        <p class="copy">© <span id="ano"></span> Nome da Loja — <a href="https://github.com/otavioing"
+                target="_blank">Desenvolvido por Otávio</a></p>
+    </footer>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

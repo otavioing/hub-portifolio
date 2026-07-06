@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/imc.css">
+    <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo" id="logo">
+            <img src="img/logo.svg" alt="Logo da Calculadora de IMC">
+            <h1>Health<span style="color: #10B77F;">Metric</span></h1>
+        </div>
+<!-- 
+        <div class="menu-toggle">
+            ☰
+        </div>
+
+
+        <nav>
+            <a href="index.html" style="color: #10B77F;">Início</a>
+            <a href="#">Contato</a>
+            <a href="sobre.html">Sobre</a>
+        </nav> -->
+
+    </header>
+
+    <main class="main">
+
+        <div class="containercalculadora">
+
+            <div class="esquerda">
+
+                <div class="infos">
+                    <h2>Calculadora de Índice de Massa Corporal (IMC)</h2>
+                    <p>Calcule a relação entre seu peso e altura para entender sua categoria de peso atual.</p>
+                </div>
+
+                <div class="forminfos">
+                    <form id="formimc">
+
+                        <label for="peso">Peso (kg):</label>
+                        <input class="input-peso" type="number" id="peso" name="peso" required placeholder="EX. 75">
+
+                        <label for="altura">Altura (m):</label>
+                        <input class="input-altura" type="number" id="altura" name="altura" step="0.01" required
+                            placeholder="EX. 175">
+
+                        <div class="botoesform">
+                            <button id="calcular" type="submit" style="background-color: #10B77F;"> <img
+                                    src="img/Iconcalc.svg" alt=""> Calcular</button>
+                            <button id="limpar" type="reset" style="color: black;">Limpar</button>
+
+                        </div>
+
+
+                    </form>
+                </div>
+
+                <div class="nota">
+                    <p>Nota: O IMC é uma medida de referência e não considera massa muscular versus gordura. Consulte um
+                        especialista para um diagnóstico detalhado.</p>
+                </div>
+
+            </div>
+            <div class="direita">
+
+                <div class="resultado-container">
+
+                    <p class="resultado-label">SEU RESULTADO ATUAL</p>
+
+                    <div class="resultado-valor">
+                        <span class="numero" id="resultado">00.0</span>
+                        <span class="unidade">kg/m²</span>
+                    </div>
+
+                    <div class="resultado-status">
+                        PESO SAUDÁVEL
+                    </div>
+
+                    <div class="barra-imc">
+                        <div class="indicador"></div>
+                    </div>
+
+                    <div class="legendas">
+                        <span>ABAIXO DO PESO</span>
+                        <span>NORMAL</span>
+                        <span>SOBREPESO</span>
+                        <span>OBESIDADE</span>
+                    </div>
+
+                    <div class="cards-info">
+
+                        <div class="card-info">
+                            <h4>🍎 Alimentação</h4>
+                            <p>
+                                Mantenha uma alimentação equilibrada, rica em fibras
+                                e proteínas magras para sustentar seu peso atual.
+                            </p>
+                        </div>
+
+                        <div class="card-info">
+                            <h4>🏃 Atividade Física</h4>
+                            <p>
+                                Recomenda-se pelo menos 150 minutos de atividade
+                                aeróbica moderada por semana.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+    <script src="script/header.js"></script>
+    <script src="script/imc.js"></script>
+
+</body>
+
+</html>

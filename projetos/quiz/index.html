@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Genérico</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <div class="start-modal" id="startModal" role="dialog" aria-modal="true">
+        <div class="start-card">
+          <h2>Quem está fazendo o quiz?</h2>
+          <input id="participantName" type="text" placeholder="Seu nome" aria-label="Seu nome" />
+          <div class="start-actions">
+            <button id="startButton" class="next-button">Começar</button>
+          </div>
+        </div>
+      </div>
+      <section class="quiz-card" aria-label="Quiz">
+        <header class="quiz-header">
+          <div>
+            <p class="eyebrow">Quiz genérico</p>
+            <h1>Desafio de perguntas</h1>
+          </div>
+          <div class="progress-chip" id="progressChip">Pergunta 1 de 1</div>
+        </header>
+
+        <div class="quiz-body" id="quizBody">
+          <p class="question-count" id="questionCount"></p>
+          <h2 class="question-text" id="questionText"></h2>
+
+          <div class="options-grid" id="optionsGrid" role="group" aria-label="Alternativas"></div>
+
+          <div class="feedback" id="feedback" aria-live="polite"></div>
+
+          <div class="timer" id="timer" aria-hidden="false">
+            <div class="timer-bar" aria-hidden="true">
+              <div class="timer-fill" id="timerFill"></div>
+            </div>
+            <div class="timer-text" id="timerText">00:00</div>
+          </div>
+
+          <button class="next-button" id="nextButton" type="button" disabled>
+            Próxima pergunta
+          </button>
+        </div>
+
+        <div class="result-panel hidden" id="resultPanel" aria-live="polite">
+          <h2>Resultado final</h2>
+          <div class="result-stats">
+            <div class="stat-card">
+              <span>Acertos</span>
+              <strong id="correctCount">0</strong>
+            </div>
+            <div class="stat-card">
+              <span>Erros</span>
+              <strong id="wrongCount">0</strong>
+            </div>
+            <div class="stat-card">
+              <span>Aproveitamento</span>
+              <strong id="scorePercent">0%</strong>
+            </div>
+            <div class="stat-card">
+              <span>Tempo total</span>
+              <strong id="totalTime">00:00</strong>
+            </div>
+          </div>
+          <div class="ranking" id="ranking">
+            <h3>Ranking</h3>
+            <ol id="rankingList" class="ranking-list"></ol>
+            <div style="margin-top:12px; display:flex; gap:8px;">
+              <button id="clearRanking" class="restart-button">Limpar ranking</button>
+            </div>
+          </div>
+          <button class="restart-button" id="restartButton" type="button">
+            Reiniciar quiz
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

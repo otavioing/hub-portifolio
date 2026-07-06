@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ======================================================= HEADER ===================================================================== */
+
+main {
+    background-color: #F6F8F7;
+
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    gap: 10px;
+    background-color: #FFFFFF;
+    position: relative;
+}
+
+.header>div {
+    margin-right: auto;
+    /* empurra tudo pra esquerda */
+}
+
+.header nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header .logo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header img {
+    width: 40px;
+}
+
+.header nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.header nav a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.header nav a:hover {
+    color: #10B77F;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+
+    .header {
+        justify-content: space-between;
+    }
+
+    .header nav {
+        position: static;
+        /* remove o absolute */
+        transform: none;
+        /* remove o translate */
+    }
+
+    .sobre {
+        flex-direction: column;
+    }
+
+    .esquerda,
+    .direita {
+        width: 100%;
+    }
+
+    .direita img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* REMOVE o empurrão antigo da logo */
+    .header>div {
+        margin-right: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .header nav {
+        display: none;
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        background-color: #FFFFFF;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .header nav.active {
+        display: flex;
+    }
+
+}

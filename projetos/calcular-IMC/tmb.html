@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/tbm.css">
+    <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo" id="logo">
+            <img src="img/logo.svg" alt="Logo da Calculadora de IMC">
+            <h1>Health<span style="color: #10B77F;">Metric</span></h1>
+        </div>
+
+        <!-- <div class="menu-toggle">
+            ☰
+        </div>
+
+
+        <nav>
+            <a href="index.html" style="color: #10B77F;">Início</a>
+            <a href="#">Contato</a>
+            <a href="sobre.html">Sobre</a>
+        </nav> -->
+
+    </header>
+    <main>
+
+        <div class="container">
+
+            <div class="main-header">
+                <h1>Calculadora de Taxa Metabólica Basal (TMB)</h1>
+                <p>
+                    Descubra quantas calorias seu corpo queima em repouso absoluto e planeje
+                    sua dieta com precisão científica baseada no seu nível de atividade.
+                </p>
+            </div>
+
+            <div class="grid-principal">
+
+                <!-- CARD FORM -->
+                <div class="card form-card">
+                    <h2>Dados Bioantropométricos</h2>
+
+                    <label>GÊNERO</label>
+
+                    <div class="genero">
+
+                        <input type="radio" name="genero" id="masculino" value="masculino" checked>
+                        <label for="masculino" class="btn-genero">Masculino</label>
+
+                        <input type="radio" name="genero" id="feminino" value="feminino">
+                        <label for="feminino" class="btn-genero">Feminino</label>
+
+                    </div>
+
+
+                    <div class="inputs-row">
+                        <div>
+                            <label>IDADE (ANOS)</label>
+                            <input type="number" id="idade" placeholder="Ex: 25" />
+                        </div>
+                        <div>
+                            <label>PESO (KG)</label>
+                            <input type="number" id="peso" placeholder="Ex: 75" />
+                        </div>
+                        <div>
+                            <label>ALTURA (CM)</label>
+                            <input type="number" id="altura" placeholder="Ex: 175" />
+                        </div>
+                    </div>
+
+                    <label>NÍVEL DE ATIVIDADE FÍSICA</label>
+                    <select id="atividade">
+                        <option>Moderadamente Ativo (3-5 dias/semana)</option>
+                        <option>Sedentário</option>
+                        <option>Levemente Ativo</option>
+                        <option>Muito Ativo</option>
+                    </select>
+
+                    <button class="btn-calcular" type="button">Calcular TMB</button>
+                </div>
+
+                <!-- LADO DIREITO -->
+                <div class="lado-direito">
+
+                    <!-- RESULTADO -->
+                    <div class="card resultado">
+                        <span>SUA TAXA METABÓLICA BASAL</span>
+                        <h3>1.840</h3>
+                        <p>kcal / dia</p>
+                        <small>
+                            *Este é o número mínimo de calorias que seu corpo
+                            queima apenas para manter as funções vitais.*
+                        </small>
+                    </div>
+
+                    <!-- GET -->
+                    <div class="card get-card">
+                        <h3>Gasto Energético Total (GET)</h3>
+                        <p>
+                            Com base no seu nível de atividade moderada, seu
+                            corpo consome aproximadamente:
+                        </p>
+
+                        <div class="get-item manter">
+                            <span>Manter Peso</span>
+                            <strong>2.530 kcal</strong>
+                        </div>
+
+                        <div class="get-item perder">
+                            <span>Perder Peso</span>
+                            <strong>2.030 kcal</strong>
+                        </div>
+
+                        <div class="get-item ganhar">
+                            <span>Ganhar Peso</span>
+                            <strong>3.030 kcal</strong>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- CARDS INFERIORES -->
+            <div class="grid-inferior">
+                <div class="card mini-card">
+                    <h4>Déficit Calórico</h4>
+                    <p>
+                        Para emagrecer, consuma menos que o seu GET,
+                        mas nunca menos que sua TMB sem supervisão.
+                    </p>
+                </div>
+
+                <div class="card mini-card">
+                    <h4>Massa Muscular</h4>
+                    <p>
+                        Quanto mais músculos você tem, maior será sua TMB,
+                        pois o tecido muscular queima mais energia.
+                    </p>
+                </div>
+
+                <div class="card mini-card">
+                    <h4>Consistência</h4>
+                    <p>
+                        Os valores são estimativas. Acompanhe seu progresso
+                        e ajuste as calorias semanalmente.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="script/tbm.js"></script>
+    <script src="script/header.js"></script>
+</body>
+
+</html>

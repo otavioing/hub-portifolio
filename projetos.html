@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Domingues Dev</title>
+    <title>Build Now</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="projects-page">
     <header class="site-header">
         <div class="container header-inner">
-            <a class="brand" href="#top" aria-label="Domingues Dev, início">Domingues Dev</a>
+            <a class="brand" href="index.html#top" aria-label="Build Now, início">Build Now</a>
 
             <nav class="site-nav" aria-label="Navegação principal">
                 <a class="active" href="index.html">Início</a>
                 <a href="projetos.html">Portfólio</a>
-                <a href="#como-funciona">Como Funciona</a>
+                <a href="index.html#como-funciona">Como Funciona</a>
             </nav>
 
-            <a class="header-button" href="#contato">Solicitar Orçamento</a>
+            <a class="header-button" href="index.html#contato">Solicitar Orçamento</a>
         </div>
     </header>
 
@@ -38,21 +40,15 @@
                 <div class="projects-toolbar">
                     <div class="projects-filters" data-filter-group>
                         <button type="button" class="filter-chip is-active" data-category="todos">Todos</button>
-                        <button type="button" class="filter-chip" data-category="gastronomia">Gastronomia</button>
-                        <button type="button" class="filter-chip" data-category="saude">Saúde</button>
+                        <button type="button" class="filter-chip" data-category="advocacia">Advocacia</button>
+                        <button type="button" class="filter-chip" data-category="Construcao">Construção</button>
                         <button type="button" class="filter-chip" data-category="servicos">Serviços</button>
-                        <button type="button" class="filter-chip" data-category="lojas">Lojas</button>
                     </div>
 
                     <label class="projects-search" for="project-search">
                         <span class="sr-only">Buscar projetos</span>
-                        <input
-                            id="project-search"
-                            type="search"
-                            placeholder="Buscar projetos..."
-                            autocomplete="off"
-                            data-project-search
-                        >
+                        <input id="project-search" type="search" placeholder="Buscar projetos..." autocomplete="off"
+                            data-project-search>
                     </label>
                 </div>
             </div>
@@ -68,21 +64,21 @@
     <footer class="site-footer" id="contato">
         <div class="container footer-grid">
             <div class="footer-brand-block">
-                <a class="footer-brand" href="#top">Domingues Dev</a>
+                <a class="footer-brand" href="index.html#top">Build Now</a>
                 <p>Construindo experiências digitais de alta performance para negócios ambiciosos.</p>
             </div>
 
             <nav class="footer-links" aria-label="Navegação do rodapé">
                 <h2>Navegação</h2>
-                <a href="#servicos">Serviços</a>
-                <a href="#portfolio">Portfólio</a>
-                <a href="#como-funciona">Como Funciona</a>
+                <a href="index.html#servicos">Serviços</a>
+                <a href="index.html#portfolio">Portfólio</a>
+                <a href="index.html#como-funciona">Como Funciona</a>
             </nav>
 
             <nav class="footer-links" aria-label="Links institucionais">
                 <h2>Empresa</h2>
-                <a href="#contato">Contato</a>
-                <a href="#privacidade">Privacidade</a>
+                <a href="index.html#contato">Contato</a>
+                <a href="index.html#privacidade">Privacidade</a>
             </nav>
 
             <div class="footer-icons" aria-label="Redes e contato">
@@ -96,12 +92,12 @@
         </div>
 
         <div class="container footer-bottom">
-            <p>© 2024 Domingues Dev. Todos os direitos reservados.</p>
+            <p>© 2024 Build Now. Todos os direitos reservados.</p>
         </div>
     </footer>
 
     <a class="back-to-top" href="#top" aria-label="Voltar ao topo" data-back-to-top>
-        <span aria-hidden="true">↑</span>
+        <span aria-hidden="true"><img src="imgs/icons/arrow-up.svg" alt="Voltar ao topo" /></span>
     </a>
 
     <script>
@@ -133,120 +129,55 @@
             }
         };
 
-        const createProjectArtwork = ({ title, accent, surface, glow, detail }) => {
-            const svg = `
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-label="${title}">
-                    <defs>
-                        <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-                            <stop offset="0%" stop-color="${surface}" />
-                            <stop offset="100%" stop-color="#ffffff" />
-                        </linearGradient>
-                        <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
-                            <stop offset="0%" stop-color="#ffffff" />
-                            <stop offset="100%" stop-color="#eef3fb" />
-                        </linearGradient>
-                        <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
-                            <stop offset="0%" stop-color="${accent}" />
-                            <stop offset="100%" stop-color="${glow}" />
-                        </linearGradient>
-                    </defs>
-                    <rect width="1200" height="750" rx="32" fill="url(#bg)" />
-                    <circle cx="1030" cy="128" r="110" fill="${glow}" fill-opacity="0.26" />
-                    <circle cx="198" cy="604" r="138" fill="${glow}" fill-opacity="0.14" />
-                    <rect x="118" y="104" width="964" height="524" rx="28" fill="url(#screen)" stroke="#e5ebf4" />
-                    <rect x="156" y="146" width="888" height="34" rx="17" fill="#e9eef7" />
-                    <rect x="188" y="156" width="70" height="14" rx="7" fill="${accent}" fill-opacity="0.82" />
-                    <rect x="272" y="156" width="110" height="14" rx="7" fill="#d8deea" />
-                    <rect x="398" y="156" width="96" height="14" rx="7" fill="#d8deea" />
-                    <rect x="156" y="206" width="888" height="332" rx="22" fill="#f8fbff" stroke="#e5ebf4" />
-                    <rect x="186" y="238" width="290" height="26" rx="13" fill="${accent}" fill-opacity="0.14" />
-                    <rect x="186" y="286" width="392" height="18" rx="9" fill="#cfd7e6" />
-                    <rect x="186" y="322" width="328" height="18" rx="9" fill="#d7dfea" />
-                    <rect x="186" y="358" width="262" height="18" rx="9" fill="#e0e6ef" />
-                    <rect x="186" y="418" width="336" height="128" rx="18" fill="#ffffff" stroke="#e5ebf4" />
-                    <rect x="546" y="238" width="448" height="308" rx="20" fill="${detail}" fill-opacity="0.12" />
-                    <rect x="582" y="274" width="382" height="24" rx="12" fill="#ffffff" fill-opacity="0.92" />
-                    <rect x="582" y="318" width="164" height="18" rx="9" fill="#ffffff" fill-opacity="0.86" />
-                    <rect x="582" y="356" width="248" height="18" rx="9" fill="#ffffff" fill-opacity="0.76" />
-                    <rect x="582" y="394" width="216" height="18" rx="9" fill="#ffffff" fill-opacity="0.68" />
-                    <rect x="582" y="448" width="124" height="46" rx="14" fill="#ffffff" fill-opacity="0.9" />
-                    <rect x="724" y="448" width="192" height="46" rx="14" fill="#ffffff" fill-opacity="0.72" />
-                    <rect x="210" y="436" width="252" height="96" rx="16" fill="url(#accent)" fill-opacity="0.1" />
-                    <rect x="210" y="450" width="132" height="18" rx="9" fill="${accent}" fill-opacity="0.34" />
-                    <rect x="210" y="484" width="188" height="12" rx="6" fill="#d4dbea" />
-                    <rect x="210" y="506" width="164" height="12" rx="6" fill="#dfe5ef" />
-                    <rect x="232" y="658" width="736" height="22" rx="11" fill="#d9e1ee" />
-                    <rect x="282" y="630" width="40" height="48" rx="20" fill="#cdd6e5" />
-                    <rect x="878" y="630" width="40" height="48" rx="20" fill="#cdd6e5" />
-                    <text x="160" y="694" fill="#94a3b8" font-size="16" font-family="Arial, sans-serif">${title}</text>
-                </svg>`;
-
-            return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
-        };
-
         const projectData = [
             {
-                id: 'bistro-elegance',
-                nome: 'Bistrô Elegance',
-                categoria: 'Gastronomia',
-                descricao: 'Plataforma de reservas e menu digital para restaurante de alta gastronomia, com foco em navegação fluida e experiência imersiva.',
-                imagem: createProjectArtwork({
-                    title: 'Bistrô Elegance',
-                    accent: '#f59e0b',
-                    surface: '#fff5e6',
-                    glow: '#fb923c',
-                    detail: '#f97316'
-                }),
-                tecnologias: ['Next.js', 'Tailwind CSS'],
-                linkDemo: '#',
+                id: 'advocacia',
+                nome: 'advocacia',
+                categoria: 'advocacia',
+                descricao: 'Landing page moderna e responsiva desenvolvida para um escritório de advocacia, com foco em transmitir credibilidade e facilitar o contato com novos clientes.',
+                imagem: '/imgs/advocacia.png',
+                tecnologias: ['HTML', 'CSS', 'JavaScript'],
+                linkDemo: '/projetos/landing-page-de-adv/index.html',
                 linkModelo: '#'
             },
             {
-                id: 'clinica-vitalis',
-                nome: 'Clínica Vitalis',
-                categoria: 'Saúde',
-                descricao: 'Sistema de agendamento online e portal do paciente com interface clara, acessível e otimizada para atendimento rápido.',
-                imagem: createProjectArtwork({
-                    title: 'Clínica Vitalis',
-                    accent: '#2563eb',
-                    surface: '#edf5ff',
-                    glow: '#60a5fa',
-                    detail: '#1d4ed8'
-                }),
-                tecnologias: ['React', 'Framer Motion'],
-                linkDemo: '#',
+                id: 'materiais-de-construcao',
+                nome: 'materiais de construção',
+                categoria: 'Construção',
+                descricao: 'Site institucional desenvolvido para uma loja de materiais de construção, com catálogo de produtos e solicitação de orçamentos de forma prática e rápida.',
+                imagem: '/imgs/materiais-de-construcao.png',
+                tecnologias: ['HTML', 'CSS', 'JavaScript'],
+                linkDemo: '/projetos/landing-page-loja-de-materiais-de-construção/index.html',
                 linkModelo: '#'
             },
             {
-                id: 'consultoria-prime',
-                nome: 'Consultoria Prime',
+                id: 'moveis-planejados',
+                nome: 'móveis planejados',
                 categoria: 'Serviços',
-                descricao: 'Landing page corporativa de alta conversão para serviços de consultoria, destacando autoridade com design minimalista.',
-                imagem: createProjectArtwork({
-                    title: 'Consultoria Prime',
-                    accent: '#14b8a6',
-                    surface: '#ecfffb',
-                    glow: '#2dd4bf',
-                    detail: '#0f766e'
-                }),
-                tecnologias: ['Vue.js', 'Tailwind CSS'],
-                linkDemo: '#',
+                descricao: 'Site institucional desenvolvido para uma empresa de móveis planejados, com galeria de projetos realizados e integração direta com o WhatsApp para atendimento.',
+                imagem: '/imgs/moveis-planejados.png',
+                tecnologias: ['HTML', 'CSS', 'JavaScript'],
+                linkDemo: '/projetos/landing-page-moveis-planejados/index.html',
                 linkModelo: '#'
             },
             {
-                id: 'aura-boutique',
-                nome: 'Aura Boutique',
-                categoria: 'Lojas',
-                descricao: 'E-commerce de moda com foco em performance e navegação elegante, catálogo organizado e jornada de compra simplificada.',
-                imagem: createProjectArtwork({
-                    title: 'Aura Boutique',
-                    accent: '#8b5cf6',
-                    surface: '#f4efff',
-                    glow: '#a78bfa',
-                    detail: '#7c3aed'
-                }),
-                tecnologias: ['Next.js', 'Shopify API'],
-                linkDemo: '#',
+                id: 'calcular-IMC',
+                nome: 'calcular IMC',
+                categoria: 'Serviços',
+                descricao: 'Aplicação web desenvolvida para calcular IMC, TMB e Percentual de Gordura Corporal de forma rápida, prática e intuitiva.',
+                imagem: '/imgs/calcular-IMC.png',
+                tecnologias: ['HTML', 'CSS', 'JavaScript'],
+                linkDemo: '/projetos/calcular-IMC/index.html',
+                linkModelo: '#'
+            },
+            {
+                id: 'quiz',
+                nome: 'quiz',
+                categoria: 'quiz',
+                descricao: 'Aplicação web desenvolvida para auxiliar nos estudos por meio de quizzes de múltipla escolha, com sistema de pontuação e ranking de usuários.',
+                imagem: '/imgs/quiz.png',
+                tecnologias: ['HTML', 'CSS', 'JavaScript'],
+                linkDemo: '/projetos/quiz/index.html',
                 linkModelo: '#'
             }
         ];
@@ -339,4 +270,5 @@
         });
     </script>
 </body>
+
 </html>

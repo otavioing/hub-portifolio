@@ -1,0 +1,240 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    background-color: #F6F8F7;
+}
+
+/* Card principal */
+.containercalculadora {
+    display: flex;
+    width: 1000px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+/* Lado esquerdo */
+.esquerda {
+    flex: 1;
+    padding: 40px;
+    background-color: #ffffff;
+    color: white;
+}
+
+.esquerda .infos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.esquerda .infos h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333333;
+}
+
+.esquerda .infos p {
+    font-size: 16px;
+    color: #666666;
+}
+
+.esquerda .forminfos form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333;
+}
+
+.esquerda .forminfos form input {
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+    /* espaço pra imagem */
+    margin-bottom: 20px;
+    border: none;
+    background-color: #F6F8F7;
+    border-radius: 4px;
+    font-size: 14px;
+
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    background-size: 18px;
+}
+
+.input-peso {
+    background-image: url("../img/peso.svg");
+
+}
+
+.input-altura {
+    background-image: url("../img/altura.svg");
+}
+
+.esquerda .forminfos form .botoesform {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.esquerda .forminfos form .botoesform button {
+    display: flex;
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nota {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(16, 183, 127, 0.2);
+    ;
+}
+
+.nota p {
+    color: #10B77F;
+}
+
+
+/* Lado direito */
+.direita {
+    width: 50%;
+    padding: 40px;
+    background-color: #f4f6f5;
+}
+
+.resultado-container {
+    text-align: center;
+}
+
+.resultado-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #7a7a7a;
+    margin-bottom: 20px;
+}
+
+.resultado-valor {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.numero {
+    font-size: 80px;
+    font-weight: bold;
+    color: #0f2e25;
+}
+
+.unidade {
+    font-size: 18px;
+    color: #10B77F;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.resultado-status {
+    margin: 20px auto;
+    background-color: #10B77F;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 20px;
+    width: fit-content;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.barra-imc {
+    margin: 30px 0 10px;
+    height: 10px;
+    border-radius: 10px;
+    background: linear-gradient(to right,
+            #4A90E2 0% 25%,
+            #10B77F 25% 50%,
+            #F4C542 50% 75%,
+            #E85C5C 75% 100%);
+    position: relative;
+}
+
+.indicador {
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background-color: #10B77F;
+    border-radius: 50%;
+}
+
+
+.legendas {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #7a7a7a;
+    margin-bottom: 40px;
+}
+
+.cards-info {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card-info {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.card-info h4 {
+    margin-bottom: 10px;
+    color: #0f2e25;
+}
+
+.card-info p {
+    font-size: 13px;
+    color: #666;
+}
+
+.footer-info {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 12px;
+    color: #9a9a9a;
+}
+
+@media screen and (max-width: 1000px) {
+    .containercalculadora {
+        flex-direction: column;
+        width: 90%;
+    }
+    .direita {
+        width: 100%;
+    }
+}

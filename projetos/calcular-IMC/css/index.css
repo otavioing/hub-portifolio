@@ -1,0 +1,165 @@
+/* ======================================================= MAIN ===================================================================== */
+
+.main {
+    background-color: #F6F8F7;
+    padding: 20px;
+}
+
+.bemvindo {
+    width: 100%;
+}
+
+.bemvindo h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.bemvindo p {
+    font-size: 18px;
+    color: #333333;
+    margin-bottom: 40px;
+}
+
+.titulocalcs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.titulocalcs img {
+    width: 25px;
+}
+
+.containercalculadoras {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 250px;
+}
+
+.containerfotocard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.containerfotocard img {
+    width: 30px;
+}
+
+.infos {
+    margin-top: 20px;
+}
+
+.infos h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.infos p {
+    font-size: 16px;
+    color: #333333;
+}
+
+.containerbotao {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.botaocalc {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgba(18, 155, 109, 0.2);
+    font-weight: bold;
+    font-size: large;
+    color: #10B77F;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.botaocalc:hover {
+    background-color: #10B77F;
+    color: #FFFFFF;
+}
+
+.containersobre {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.sobre {
+    display: flex;
+    width: 90%;
+    /* height: 300px; */
+    background-color: #10B77F;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.esquerda {
+    width: 50%;
+    padding: 20px;
+}
+
+.esquerda h2 {
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.esquerda p {
+    font-size: 16px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+
+}
+
+.direita {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.direita img {
+    width: 500px;
+}
+
+@media screen and (max-width: 1000px) {
+
+    .sobre {
+        flex-direction: column;
+    }
+
+    .esquerda,
+    .direita {
+        width: 100%;
+    }
+
+    .direita img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+}
+
