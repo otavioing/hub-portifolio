@@ -608,6 +608,7 @@ img {
     border: 1px solid rgba(31, 41, 55, 0.14);
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
     transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 
@@ -655,6 +656,37 @@ img {
     opacity: 1;
     pointer-events: auto;
     transform: translateY(0);
+}
+
+.copy-notification {
+    position: fixed;
+    right: 1.25rem;
+    bottom: 5rem;
+    z-index: 1100;
+    max-width: min(22rem, calc(100vw - 2rem));
+    padding: 0.9rem 1.1rem;
+    border: 1px solid rgba(37, 99, 235, 0.18);
+    border-radius: 0.75rem;
+    background: #ffffff;
+    color: var(--secondary-color);
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.16);
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.4;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+.copy-notification.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.copy-notification.is-error {
+    border-color: rgba(220, 38, 38, 0.22);
+    color: #991b1b;
 }
 
 .form-modal-overlay {
@@ -1052,7 +1084,8 @@ body.form-modal-open {
     .cta-primary,
     .cta-secondary,
     .header-button,
-    .back-to-top {
+    .back-to-top,
+    .copy-notification {
         transition: none !important;
         transform: none !important;
     }
