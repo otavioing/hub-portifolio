@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Catálogo - Mimos de Bebê</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="script/tailwind-config.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&amp;family=EB+Garamond:wght@400;500&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+</head>
+
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col relative overflow-x-hidden">
+    <div class="noise-overlay z-0"></div>
+    <!-- TopNavBar -->
+    <header
+    class="bg-background/80 dark:bg-background/80 backdrop-blur-md fixed top-0 w-full z-50 bg-surface-container-low dark:bg-surface-container-low/30 shadow-[0_20px_40px_rgba(212,165,165,0.06)]">
+    <nav
+        class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+        <a class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim tracking-tight hover:opacity-80 transition-all duration-300 active:scale-95 transition-transform mb-4 md:mb-0"
+            href="index.html">
+            Lorem ipsum
+        </a>
+        <ul class="flex flex-wrap justify-center gap-gutter font-body-md text-body-md">
+            <li><a class="text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary transition-colors hover:opacity-80 transition-all duration-300 active:scale-95 transition-transform"
+                    href="index.html">Início</a></li>
+            <li><a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary/30 pb-1 hover:opacity-80 transition-all duration-300 active:scale-95 transition-transform"
+                    href="catalogo.html">Catálogo</a></li>
+            <li><a class="text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary transition-colors hover:opacity-80 transition-all duration-300 active:scale-95 transition-transform"
+                    href="sobre.html">Sobre</a></li>
+            <li><a class="text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary transition-colors hover:opacity-80 transition-all duration-300 active:scale-95 transition-transform"
+                    href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+    <!-- Main Content -->
+    <main
+        class="flex-grow pt-[120px] pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full relative z-10">
+        <!-- Header -->
+        <header class="text-center mb-16">
+            <h1 class="font-display-lg text-display-lg text-primary mb-4">Nosso Catálogo</h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                Peças únicas, feitas à mão com materiais suaves e seguros para celebrar a chegada do seu bebê.
+            </p>
+        </header>
+        <div class="flex flex-col md:flex-row gap-gutter">
+            <!-- Sidebar Filters -->
+            <aside class="w-full md:w-64 shrink-0 mb-8 md:mb-0">
+                <div class="bg-surface-container-lowest rounded-xl p-6 soft-shadow sticky top-[140px]">
+                    <h2
+                        class="font-headline-md text-headline-md text-on-background border-b border-surface-variant pb-4 mb-6">
+                        Categorias</h2>
+                    <ul class="space-y-4 font-body-md text-body-md">
+                        <li>
+                            <label class="flex items-center space-x-3 cursor-pointer group">
+                                <input checked="" value="Todos"
+                                    class="form-radio text-primary focus:ring-primary-container border-outline-variant rounded-full h-5 w-5 bg-surface-container"
+                                    name="category" type="radio" />
+                                <span
+                                    class="text-primary font-medium group-hover:text-primary transition-colors">Todos</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="flex items-center space-x-3 cursor-pointer group">
+                                <input value="Enxovais"
+                                    class="form-radio text-primary focus:ring-primary-container border-outline-variant rounded-full h-5 w-5 bg-surface-container"
+                                    name="category" type="radio" />
+                                <span
+                                    class="text-on-surface-variant group-hover:text-primary transition-colors">Enxovais</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="flex items-center space-x-3 cursor-pointer group">
+                                <input value="Roupas Bordadas"
+                                    class="form-radio text-primary focus:ring-primary-container border-outline-variant rounded-full h-5 w-5 bg-surface-container"
+                                    name="category" type="radio" />
+                                <span class="text-on-surface-variant group-hover:text-primary transition-colors">Roupas
+                                    Bordadas</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="flex items-center space-x-3 cursor-pointer group">
+                                <input value="Brinquedos &amp; Bonecos"
+                                    class="form-radio text-primary focus:ring-primary-container border-outline-variant rounded-full h-5 w-5 bg-surface-container"
+                                    name="category" type="radio" />
+                                <span
+                                    class="text-on-surface-variant group-hover:text-primary transition-colors">Brinquedos
+                                    &amp; Bonecos</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="flex items-center space-x-3 cursor-pointer group">
+                                <input value="Kits Maternidade"
+                                    class="form-radio text-primary focus:ring-primary-container border-outline-variant rounded-full h-5 w-5 bg-surface-container"
+                                    name="category" type="radio" />
+                                <span class="text-on-surface-variant group-hover:text-primary transition-colors">Kits
+                                    Maternidade</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="flex items-center space-x-3 cursor-pointer group">
+                                <input value="Decoração"
+                                    class="form-radio text-primary focus:ring-primary-container border-outline-variant rounded-full h-5 w-5 bg-surface-container"
+                                    name="category" type="radio" />
+                                <span
+                                    class="text-on-surface-variant group-hover:text-primary transition-colors">Decoração</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <section class="flex-grow">
+                <div class="relative mb-8">
+                    <span
+                        class="material-symbols-outlined pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-outline text-[22px]">search</span>
+                    <input id="catalogo-search"
+                        class="w-full rounded-full border border-outline-variant bg-surface-container-lowest py-3 pl-12 pr-5 font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/60 focus:border-primary focus:ring-primary"
+                        type="search" placeholder="Pesquisar produto" />
+                </div>
+                <!-- Product Grid -->
+                <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            </section>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer
+        class="bg-surface-container dark:bg-surface-container-high w-full rounded-t-xl bg-surface-container-high dark:bg-surface-container-highest mt-auto">
+        <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto">
+            <!-- Brand Column -->
+            <div class="flex flex-col gap-4">
+                <span class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim">Mimos de
+                    Bebê</span>
+                <p class="font-body-md text-body-md text-on-surface-variant max-w-xs">
+                    Ateliê especializado em enxovais personalizados e peças artesanais para bebês, criados com amor e
+                    delicadeza.
+                </p>
+                <p class="font-label-sm text-label-sm text-on-surface-variant mt-4">
+                    © 2024 Mimos de Bebê - Feito à mão com amor.
+                </p>
+            </div>
+            <!-- Links Column -->
+            <div class="flex flex-col gap-4">
+                <h4 class="font-label-md text-label-md text-on-surface uppercase tracking-wider mb-2">Navegação</h4>
+                <ul class="flex flex-col gap-3 font-label-md text-label-md">
+                    <li><a class="text-on-secondary-container dark:text-on-secondary-fixed-variant hover:text-primary transition-colors underline-offset-4 hover:underline scale-105 transition-transform inline-block"
+                            href="#">Catálogo</a></li>
+                    <li><a class="text-on-secondary-container dark:text-on-secondary-fixed-variant hover:text-primary transition-colors underline-offset-4 hover:underline scale-105 transition-transform inline-block"
+                            href="#">Sobre</a></li>
+                    <li><a class="text-on-secondary-container dark:text-on-secondary-fixed-variant hover:text-primary transition-colors underline-offset-4 hover:underline scale-105 transition-transform inline-block"
+                            href="#">Contato</a></li>
+                </ul>
+            </div>
+            <!-- Social Column -->
+            <div class="flex flex-col gap-4">
+                <h4 class="font-label-md text-label-md text-on-surface uppercase tracking-wider mb-2">Conecte-se</h4>
+                <ul class="flex flex-col gap-3 font-label-md text-label-md">
+                    <li>
+                        <a class="text-on-secondary-container dark:text-on-secondary-fixed-variant hover:text-primary transition-colors underline-offset-4 hover:underline scale-105 transition-transform inline-flex items-center gap-2"
+                            href="#">
+                            Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-on-secondary-container dark:text-on-secondary-fixed-variant hover:text-primary transition-colors underline-offset-4 hover:underline scale-105 transition-transform inline-flex items-center gap-2"
+                            href="#">
+                            WhatsApp
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="script/catalogo.js"></script>
+    <script src="script/header.js"></script>
+    <script src="script/footer.js"></script>
+</body>
+
+</html>
+

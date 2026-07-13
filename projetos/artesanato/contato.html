@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>FAQ e Contato - Mimos de Bebê</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="script/tailwind-config.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&amp;family=EB+Garamond:wght@400;500&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+</head>
+
+<body class="antialiased min-h-screen flex flex-col font-body-md relative">
+    <div class="grain-overlay"></div>
+    <!-- TopNavBar (Shared Component) -->
+    <header
+        class="bg-background/80 dark:bg-background/80 backdrop-blur-md fixed top-0 w-full z-50 bg-surface-container-low dark:bg-surface-container-low/30 shadow-[0_20px_40px_rgba(212,165,165,0.06)]">
+        <nav
+            class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+            <a class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim tracking-tight hover:opacity-80 transition-all duration-300 active:scale-95 transition-transform mb-4 md:mb-0"
+                href="index.html">
+                Lorem ipsum
+            </a>
+            <ul class="flex flex-wrap justify-center gap-gutter font-body-md text-body-md">
+                <li><a class="text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary transition-colors hover:opacity-80 transition-all duration-300 active:scale-95 transition-transform"
+                        href="index.html">Início</a></li>
+                <li><a class="text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary transition-colors hover:opacity-80 transition-all duration-300 active:scale-95 transition-transform"
+                        href="catalogo.html">Catálogo</a></li>
+                <li><a class="text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary transition-colors hover:opacity-80 transition-all duration-300 active:scale-95 transition-transform"
+                        href="sobre.html">Sobre</a></li>
+                <li><a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary/30 pb-1 hover:opacity-80 transition-all duration-300 active:scale-95 transition-transform"
+                        href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Main Content -->
+    <main class="flex-grow pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+        <!-- Header Section -->
+        <div class="text-center mb-16 md:mb-24">
+            <h1 class="font-display-lg text-display-lg text-primary mb-4 hidden md:block">Dúvidas &amp; Contato</h1>
+            <h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-4 md:hidden">Dúvidas &amp;
+                Contato</h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                Estamos aqui para ajudar a tornar o momento de presentear ainda mais especial. Confira nossas dúvidas
+                frequentes ou fale diretamente conosco.
+            </p>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+            <!-- FAQ Section -->
+            <div class="lg:col-span-7">
+                <h2 class="font-headline-md text-headline-md text-primary mb-8 flex items-center gap-2">
+                    <span class="material-symbols-outlined text-[24px] font-[100]">help</span>
+                    Perguntas Frequentes
+                </h2>
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <details class="bg-surface-container-lowest rounded-lg soft-shadow overflow-hidden group">
+                        <summary
+                            class="cursor-pointer px-6 py-5 flex justify-between items-center font-body-lg text-body-lg text-on-surface hover:bg-surface-container-low transition-colors">
+                            Como funciona a personalização?
+                            <span
+                                class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform duration-300">expand_more</span>
+                        </summary>
+                        <div class="px-6 pb-6 pt-2 font-body-md text-body-md text-on-surface-variant">
+                            A personalização é feita com muito carinho e cuidado. Após escolher o produto, você pode
+                            selecionar a opção de personalização (geralmente bordado de nome ou iniciais) na página do
+                            produto. Nossa equipe entrará em contato via WhatsApp para aprovar a arte antes da
+                            confecção.
+                        </div>
+                    </details>
+                    <!-- FAQ Item 2 -->
+                    <details class="bg-surface-container-lowest rounded-lg soft-shadow overflow-hidden group">
+                        <summary
+                            class="cursor-pointer px-6 py-5 flex justify-between items-center font-body-lg text-body-lg text-on-surface hover:bg-surface-container-low transition-colors">
+                            Qual o prazo de entrega?
+                            <span
+                                class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform duration-300">expand_more</span>
+                        </summary>
+                        <div class="px-6 pb-6 pt-2 font-body-md text-body-md text-on-surface-variant">
+                            Para produtos em estoque sem personalização, despachamos em até 2 dias úteis. Produtos
+                            personalizados demandam de 5 a 7 dias úteis para confecção. O prazo de entrega da
+                            transportadora varia de acordo com a sua região e será calculado no checkout.
+                        </div>
+                    </details>
+                    <!-- FAQ Item 3 -->
+                    <details class="bg-surface-container-lowest rounded-lg soft-shadow overflow-hidden group">
+                        <summary
+                            class="cursor-pointer px-6 py-5 flex justify-between items-center font-body-lg text-body-lg text-on-surface hover:bg-surface-container-low transition-colors">
+                            Vocês enviam para todo o Brasil?
+                            <span
+                                class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform duration-300">expand_more</span>
+                        </summary>
+                        <div class="px-6 pb-6 pt-2 font-body-md text-body-md text-on-surface-variant">
+                            Sim! Enviamos nossos mimos para todo o território nacional através dos Correios (PAC e
+                            Sedex) e transportadoras parceiras, garantindo que o seu presente chegue com segurança e
+                            rapidez.
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- Contact & Map Section -->
+            <div class="lg:col-span-5 space-y-8 mt-12 lg:mt-0">
+                <!-- Contact Card -->
+                <div class="bg-surface-container-lowest rounded-lg soft-shadow p-8 dashed-border">
+                    <h2 class="font-headline-md text-headline-md text-primary mb-6 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-[24px] font-[100]">mail</span>
+                        Fale Conosco
+                    </h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                        Prefere um atendimento mais próximo? Entre em contato diretamente pelos nossos canais.
+                    </p>
+                    <div class="space-y-4">
+                        <a class="flex items-center justify-center gap-3 w-full bg-primary text-on-primary py-3 px-6 rounded-md hover:bg-on-primary-fixed-variant transition-colors font-label-md text-label-md"
+                            href="#">
+                            <span class="material-symbols-outlined text-[20px] font-[100]">chat</span>
+                            Atendimento via WhatsApp
+                        </a>
+                        <a class="flex items-center justify-center gap-3 w-full border border-secondary-fixed-dim text-secondary py-3 px-6 rounded-md hover:bg-secondary-container transition-colors font-label-md text-label-md"
+                            href="#">
+                            <span class="material-symbols-outlined text-[20px] font-[100]">photo_camera</span>
+                            Nosso Instagram
+                        </a>
+                    </div>
+                </div>
+                <!-- Location Card -->
+                <div class="bg-surface-container-lowest rounded-lg soft-shadow p-8">
+                    <h2 class="font-headline-md text-headline-md text-primary mb-6 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-[24px] font-[100]">location_on</span>
+                        Nosso Ateliê
+                    </h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                        Estamos localizados na acolhedora cidade de Atibaia, SP. <br />
+                        <span class="font-label-sm text-label-sm text-outline mt-1 block">*Atendimento presencial apenas
+                            com hora marcada.</span>
+                    </p>
+                    <div
+                        class="w-full h-48 rounded-md overflow-hidden bg-surface-container flex items-center justify-center dashed-border mb-4 relative">
+                        <!-- Map Placeholder - Replace with actual map embed if needed -->
+                        <img class="object-cover w-full h-full opacity-80 mix-blend-multiply"
+                            data-alt="A beautifully stylized, minimalist digital map of Atibaia, São Paulo, Brazil. The map is designed with a soft, tactile aesthetic using a color palette of cream, light gray, and dusty rose to match a luxury baby brand. Streets and terrain are subtly indicated with thin, elegant lines. A tasteful, delicate pin marks the atelier's location."
+                            data-location="Atibaia, SP"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCrAWmasL_-Kbv32GAClheF3Xba1KtBVd8inp843z9J3ctmwtywCyzF_sUH4STfwFBs1b9p3MIa1Z4F7xijfZNX_3lbqS6p_gtyzXuF5dlzfey6OeloMeCqColK04DP79y3QG5QC2kpxZbhH4Up2OnYyI9ykdQjB_kRu9pTXwlx-qtMie8jChPRUMjQtP_wBGkSn3k0v90jFFqQHGGZXbwgCmMGGrfV8xMjTPuTqxBb7yMtoS1eq5DbioyC5aDQrwaDaCfUMXyX8TO" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer (Shared Component) -->
+    <footer
+        class="bg-surface-container dark:bg-surface-container-high w-full rounded-t-xl bg-surface-container-high dark:bg-surface-container-highest mt-auto">
+        <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto">
+            <!-- Brand Column -->
+            <div class="flex flex-col gap-4">
+                <span class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim">Mimos de
+                    Bebê</span>
+                <p class="font-body-md text-body-md text-on-surface-variant max-w-xs">
+                    Ateliê especializado em enxovais personalizados e peças artesanais para bebês, criados com amor e
+                    delicadeza.
+                </p>
+                <p class="font-label-sm text-label-sm text-on-surface-variant mt-4">
+                    © 2024 Mimos de Bebê - Feito à mão com amor.
+                </p>
+            </div>
+            <!-- Links Column -->
+            <div class="flex flex-col gap-4">
+                <h4 class="font-label-md text-label-md text-on-surface uppercase tracking-wider mb-2">Navegação</h4>
+                <ul class="flex flex-col gap-3 font-label-md text-label-md">
+                    <li><a class="text-on-secondary-container dark:text-on-secondary-fixed-variant hover:text-primary transition-colors underline-offset-4 hover:underline scale-105 transition-transform inline-block"
+                            href="#">Catálogo</a></li>
+                    <li><a class="text-on-secondary-container dark:text-on-secondary-fixed-variant hover:text-primary transition-colors underline-offset-4 hover:underline scale-105 transition-transform inline-block"
+                            href="#">Sobre</a></li>
+                    <li><a class="text-on-secondary-container dark:text-on-secondary-fixed-variant hover:text-primary transition-colors underline-offset-4 hover:underline scale-105 transition-transform inline-block"
+                            href="#">Contato</a></li>
+                </ul>
+            </div>
+            <!-- Social Column -->
+            <div class="flex flex-col gap-4">
+                <h4 class="font-label-md text-label-md text-on-surface uppercase tracking-wider mb-2">Conecte-se</h4>
+                <ul class="flex flex-col gap-3 font-label-md text-label-md">
+                    <li>
+                        <a class="text-on-secondary-container dark:text-on-secondary-fixed-variant hover:text-primary transition-colors underline-offset-4 hover:underline scale-105 transition-transform inline-flex items-center gap-2"
+                            href="#">
+                            Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-on-secondary-container dark:text-on-secondary-fixed-variant hover:text-primary transition-colors underline-offset-4 hover:underline scale-105 transition-transform inline-flex items-center gap-2"
+                            href="#">
+                            WhatsApp
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="script/header.js"></script>
+    <script src="script/footer.js"></script>
+</body>
+
+</html>

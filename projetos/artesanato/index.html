@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Mimos de Bebê - Ateliê Artesanal</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="script/tailwind-config.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&amp;family=EB+Garamond:wght@400;500&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+</head>
+
+<body class="bg-background text-on-surface font-body-md antialiased overflow-x-hidden min-h-screen flex flex-col">
+    <div class="noise-overlay"></div>
+    <!-- TopNavBar -->
+    <header
+        class="bg-background/80 dark:bg-background/80 backdrop-blur-md fixed top-0 w-full z-50 bg-surface-container-low dark:bg-surface-container-low/30 shadow-[0_20px_40px_rgba(212,165,165,0.06)]">
+        <nav
+            class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+            <a class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim tracking-tight hover:opacity-80 transition-all duration-300 active:scale-95 transition-transform mb-4 md:mb-0"
+                href="index.html">
+                Lorem ipsum
+            </a>
+            <ul class="flex flex-wrap justify-center gap-gutter font-body-md text-body-md">
+                <li><a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary/30 pb-1 hover:opacity-80 transition-all duration-300 active:scale-95 transition-transform"
+                        href="index.html">Início</a></li>
+                <li><a class="text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary transition-colors hover:opacity-80 transition-all duration-300 active:scale-95 transition-transform"
+                        href="catalogo.html">Catálogo</a></li>
+                <li><a class="text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary transition-colors hover:opacity-80 transition-all duration-300 active:scale-95 transition-transform"
+                        href="sobre.html">Sobre</a></li>
+                <li><a class="text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary transition-colors hover:opacity-80 transition-all duration-300 active:scale-95 transition-transform"
+                        href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="flex-grow pt-32 pb-24">
+        <!-- Hero Section -->
+        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-32 fade-in-section">
+            <div
+                class="relative rounded-xl overflow-hidden shadow-[0_20px_40px_rgba(212,165,165,0.06)] bg-surface-container-lowest">
+                <div class="absolute inset-0 z-0">
+                    <img alt="Bebê com enxoval" class="object-cover w-full h-full opacity-80"
+                        data-alt="A beautifully composed, high-end photography shot of a sleeping newborn baby wrapped in a soft, dusty rose linen swaddle. The baby is resting on a plush cream-colored blanket. Next to the baby is a delicate, hand-embroidered personalized naming pillow. The lighting is soft, warm, and natural, creating a serene, nurturing, and luxurious aesthetic consistent with a premium handmade baby boutique."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz0KESXt01lBuyuermjI-w_lfZ5pQy0XA7rAuorRAUChOWf1RBe1d8sIEX0_zYAncK8mNOCBJuZvZeQxKsDUpS9auJd4LuEAw6CeHvNOz8HHx8wBON-1-pEGXT_Gtlaq6AYfdAPVsBiMT9sM7fDYDWWRsD2SzIA-qY5OuGvrBWWqLPZ0t_0fvdFRlD9enBikxwns9juwIGvnuy7muSIjRMIOU2rCnDWI4aFTjJQSiSL8dlc2Yvrubet2gnFcpkdp8irjJ8fuIVSWxU" />
+                </div>
+                <div
+                    class="relative z-10 flex flex-col justify-center min-h-[500px] p-8 md:p-16 bg-gradient-to-r from-background/90 via-background/70 to-transparent">
+                    <div class="max-w-xl">
+                        <span
+                            class="inline-block px-3 py-1 mb-4 rounded-full bg-tertiary/10 text-tertiary-container text-label-sm font-label-sm tracking-wide">
+                            Ateliê Artesanal
+                        </span>
+                        <h1 class="font-display-lg text-display-lg text-on-surface mb-6 leading-tight">
+                            Feito à mão, com o carinho que seu bebê merece
+                        </h1>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                            Enxovais personalizados e peças únicas, criadas ponto a ponto para celebrar o momento mais
+                            especial da sua vida.
+                        </p>
+                        <a class="inline-flex items-center justify-center px-8 py-3 bg-primary text-on-primary rounded-full hover:bg-primary/90 transition-colors duration-300 font-label-md text-label-md shadow-sm active:scale-95 transition-transform"
+                            href="catalogo.html">
+                            Ver Catálogo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Section -->
+        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-32 fade-in-section">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1 relative">
+                    <div
+                        class="aspect-square rounded-full overflow-hidden border-8 border-surface-container shadow-[0_20px_40px_rgba(212,165,165,0.06)] relative z-10">
+                        <img alt="Artesã trabalhando" class="object-cover w-full h-full"
+                            data-alt="A portrait of a warm, smiling female artisan working in her bright, sunlit studio. She is wearing a soft linen apron and carefully embroidering a delicate baby garment. The studio background is slightly blurred but shows spools of pastel thread, folded cream fabrics, and wooden embroidery hoops. The overall aesthetic is calm, professional, nurturing, and high-quality."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVA9CgL63K0kyw00L_q40HWttuz5DqOiBd9L-Df82WcidBnhotT3Uf_I0CeO8GtBDx3gg0JjYnoTS_f1EPDVQZtkNU5i30HhZ6tqIV8mo2wLfnCRV1qVNrqBlZoW8OAe8BlhkBcAhdUXexjN_V8P5PgYX5bGSzKoVJonAgXw3LBK6QsV_4Mdihs4tFKzAZyTmJoVLsOpyxjVryPBaehYUjH7480mKVRSJeUXOmuiW2vHeUGA2ope1YyxwldbSWaZEf8QJfkOIHRnjz" />
+                    </div>
+                    <div
+                        class="absolute -bottom-6 -right-6 w-48 h-48 bg-primary-fixed-dim/20 rounded-full z-0 blur-2xl">
+                    </div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <h2 class="font-headline-lg text-headline-lg md:text-headline-lg text-on-surface mb-6">Sobre a
+                        Artesã</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-4 leading-relaxed">
+                        Cada peça que sai do nosso ateliê carrega uma história. A Mimos de Bebê nasceu da paixão por
+                        transformar tecidos nobres em memórias palpáveis. Acreditamos que o enxoval do seu bebê deve ser
+                        tão único e acolhedor quanto o abraço de uma mãe.
+                    </p>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-8 leading-relaxed">
+                        Trabalhamos apenas com materiais de alta qualidade, privilegiando algodão macio, linho e
+                        bordados feitos à mão, garantindo conforto absoluto e aquele toque de "luxo tranquilo" em cada
+                        detalhe.
+                    </p>
+                    <div class="flex items-center gap-4 text-primary">
+                        <span class="material-symbols-outlined text-[32px]">favorite</span>
+                        <span
+                            class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">Feito
+                            com Amor</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Highlights Catalog -->
+        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-32 fade-in-section">
+            <div class="text-center mb-16">
+                <h2 class="font-headline-lg text-headline-lg md:text-headline-lg text-on-surface mb-4">Destaques do
+                    Catálogo</h2>
+                <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Descubra as peças mais
+                    amadas pelas nossas clientes, criadas com exclusividade e delicadeza.</p>
+            </div>
+            <div id="highlight-products" class="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+            <div class="text-center mt-12">
+                <a class="inline-flex items-center justify-center px-8 py-3 border-2 border-secondary-fixed-dim text-secondary rounded-full hover:bg-secondary/5 transition-colors duration-300 font-label-md text-label-md active:scale-95 transition-transform"
+                    href="catalogo.html">
+                    Explorar Catálogo Completo
+                </a>
+            </div>
+        </section>
+        <!-- Testimonials -->
+        <section class="bg-surface-container-low py-24 px-margin-mobile md:px-margin-desktop fade-in-section">
+            <div class="max-w-container-max mx-auto">
+                <div class="text-center mb-16">
+                    <span
+                        class="material-symbols-outlined icon-filled text-primary-fixed-dim text-4xl mb-4">format_quote</span>
+                    <h2 class="font-headline-lg text-headline-lg md:text-headline-lg text-on-surface mb-4">Com carinho,
+                        das mães</h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div
+                        class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_20px_40px_rgba(212,165,165,0.06)] relative">
+                        <div class="absolute -top-3 -left-3 w-12 h-12 bg-primary-fixed-dim/20 rounded-full blur-md">
+                        </div>
+                        <p class="font-body-md text-body-md text-on-surface-variant italic mb-6">"Receber a caixa do
+                            enxoval foi uma emoção. O cheirinho, o cuidado na embalagem e a perfeição do bordado no nome
+                            da minha filha... É um trabalho impecável!"</p>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 bg-surface-container rounded-full flex items-center justify-center text-primary font-label-md">
+                                C</div>
+                            <div>
+                                <h4 class="font-label-md text-label-md text-on-surface">Camila S.</h4>
+                                <span class="font-label-sm text-label-sm text-on-surface-variant">Mãe da Alice</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_20px_40px_rgba(212,165,165,0.06)] relative md:-translate-y-4">
+                        <div class="absolute -top-3 -left-3 w-12 h-12 bg-secondary-fixed-dim/20 rounded-full blur-md">
+                        </div>
+                        <p class="font-body-md text-body-md text-on-surface-variant italic mb-6">"A naninha virou o xodó
+                            do meu filho. A qualidade do tecido é maravilhosa, super macio e resistente às lavagens.
+                            Indico para todas as amigas."</p>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 bg-surface-container rounded-full flex items-center justify-center text-secondary font-label-md">
+                                J</div>
+                            <div>
+                                <h4 class="font-label-md text-label-md text-on-surface">Juliana M.</h4>
+                                <span class="font-label-sm text-label-sm text-on-surface-variant">Mãe do Theo</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_20px_40px_rgba(212,165,165,0.06)] relative">
+                        <div class="absolute -top-3 -left-3 w-12 h-12 bg-tertiary-fixed-dim/20 rounded-full blur-md">
+                        </div>
+                        <p class="font-body-md text-body-md text-on-surface-variant italic mb-6">"Comprei um kit
+                            maternidade para presentear e a mãe chorou quando abriu. É perceptível que cada pontinho é
+                            feito com muito amor."</p>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 bg-surface-container rounded-full flex items-center justify-center text-tertiary font-label-md">
+                                R</div>
+                            <div>
+                                <h4 class="font-label-md text-label-md text-on-surface">Roberta P.</h4>
+                                <span class="font-label-sm text-label-sm text-on-surface-variant">Tia coruja</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer
+        class="bg-surface-container dark:bg-surface-container-high w-full rounded-t-xl bg-surface-container-high dark:bg-surface-container-highest mt-auto">
+        <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto">
+            <!-- Brand Column -->
+            <div class="flex flex-col gap-4">
+                <span class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim">Mimos de
+                    Bebê</span>
+                <p class="font-body-md text-body-md text-on-surface-variant max-w-xs">
+                    Ateliê especializado em enxovais personalizados e peças artesanais para bebês, criados com amor e
+                    delicadeza.
+                </p>
+                <p class="font-label-sm text-label-sm text-on-surface-variant mt-4">
+                    © 2024 Mimos de Bebê - Feito à mão com amor.
+                </p>
+            </div>
+            <!-- Links Column -->
+            <div class="flex flex-col gap-4">
+                <h4 class="font-label-md text-label-md text-on-surface uppercase tracking-wider mb-2">Navegação</h4>
+                <ul class="flex flex-col gap-3 font-label-md text-label-md">
+                    <li><a class="text-on-secondary-container dark:text-on-secondary-fixed-variant hover:text-primary transition-colors underline-offset-4 hover:underline scale-105 transition-transform inline-block"
+                            href="catalogo.html">Catálogo</a></li>
+                    <li><a class="text-on-secondary-container dark:text-on-secondary-fixed-variant hover:text-primary transition-colors underline-offset-4 hover:underline scale-105 transition-transform inline-block"
+                            href="sobre.html">Sobre</a></li>
+                    <li><a class="text-on-secondary-container dark:text-on-secondary-fixed-variant hover:text-primary transition-colors underline-offset-4 hover:underline scale-105 transition-transform inline-block"
+                            href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <!-- Social Column -->
+            <div class="flex flex-col gap-4">
+                <h4 class="font-label-md text-label-md text-on-surface uppercase tracking-wider mb-2">Conecte-se</h4>
+                <ul class="flex flex-col gap-3 font-label-md text-label-md">
+                    <li>
+                        <a class="text-on-secondary-container dark:text-on-secondary-fixed-variant hover:text-primary transition-colors underline-offset-4 hover:underline scale-105 transition-transform inline-flex items-center gap-2"
+                            href="#">
+                            Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-on-secondary-container dark:text-on-secondary-fixed-variant hover:text-primary transition-colors underline-offset-4 hover:underline scale-105 transition-transform inline-flex items-center gap-2"
+                            href="#">
+                            WhatsApp
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="script/catalogo.js"></script>
+    <script src="script/header.js"></script>
+    <script src="script/footer.js"></script>
+    <script src="script/index.js"></script>
+</body>
+
+</html>

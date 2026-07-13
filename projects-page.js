@@ -58,6 +58,16 @@
             linkDemo: '/projetos/quiz/index.html',
             linkModelo: '#',
         },
+        {
+            id: 'artesanato',
+            nome: 'Artesanato',
+            categoria: 'Artesanato',
+            descricao: 'Site institucional desenvolvido para uma loja de artesanato, com catálogo de produtos e integração direta com o WhatsApp para atendimento.',
+            imagem: '/imgs/artesanato.png',
+            tecnologias: ['HTML', 'tailwindcss', 'JavaScript'],
+            linkDemo: '/projetos/artesanato/index.html',
+            linkModelo: '#',
+        },
     ];
 
     const projectState = {
