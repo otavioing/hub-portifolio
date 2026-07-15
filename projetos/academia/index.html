@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Kinetic Elite | Força que Transforma</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Montserrat:wght@700;900&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#131313",
+                        "on-primary-container": "#6c5700",
+                        "surface-container-highest": "#353534",
+                        "on-error": "#690005",
+                        "on-tertiary": "#313030",
+                        "primary-fixed-dim": "#eec200",
+                        "surface-variant": "#353534",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "on-surface": "#e5e2e1",
+                        "inverse-on-surface": "#313030",
+                        "tertiary-fixed": "#e5e2e1",
+                        "outline": "#9a9078",
+                        "outline-variant": "#4d4632",
+                        "inverse-primary": "#735c00",
+                        "secondary": "#c6c6c7",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "tertiary-container": "#d3d0d0",
+                        "surface": "#131313",
+                        "error": "#ffb4ab",
+                        "on-surface-variant": "#d1c6ab",
+                        "surface-tint": "#eec200",
+                        "primary": "#ffecb9",
+                        "on-secondary-container": "#b4b5b5",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "tertiary": "#efecec",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed": "#e2e2e2",
+                        "on-secondary": "#2f3131",
+                        "surface-container-low": "#1c1b1b",
+                        "on-secondary-fixed-variant": "#454747",
+                        "on-background": "#e5e2e1",
+                        "surface-container": "#201f1f",
+                        "surface-bright": "#3a3939",
+                        "error-container": "#93000a",
+                        "primary-fixed": "#ffe083",
+                        "on-primary-fixed": "#231b00",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "on-primary": "#3c2f00",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-container-lowest": "#0e0e0e",
+                        "secondary-container": "#454747",
+                        "on-tertiary-container": "#5a5959",
+                        "primary-container": "#facc15",
+                        "surface-dim": "#131313",
+                        "on-primary-fixed-variant": "#574500",
+                        "inverse-surface": "#e5e2e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "stack-lg": "32px",
+                        "margin-mobile": "20px",
+                        "section-gap": "120px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "stack-sm": "8px",
+                        "stack-md": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Montserrat"],
+                        "label-bold": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Montserrat"],
+                        "display-xl": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "display-xl-mobile": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["32px", { "lineHeight": "38px", "fontWeight": "700" }],
+                        "label-bold": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "display-xl": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "900" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-xl-mobile": ["44px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "900" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .delay-100 {
+            transition-delay: 100ms;
+        }
+
+        .delay-200 {
+            transition-delay: 200ms;
+        }
+
+        .delay-300 {
+            transition-delay: 300ms;
+        }
+
+        .glass-panel {
+            background: rgba(23, 23, 23, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #131313;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #353534;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #facc15;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background text-on-surface font-body-md antialiased overflow-x-hidden selection:bg-primary-container selection:text-background">
+    <!-- TopNavBar -->
+    <nav class="docked full-width top-0 sticky z-50 transition-all duration-300" id="main-nav">
+        <div
+            class="glass-panel border-b border-white/10 flat no shadows flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-stack-md max-w-container-max mx-auto">
+            <a class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-primary-container tracking-tighter uppercase shrink-0"
+                href="#">
+                Kinetic Elite
+            </a>
+            <div class="hidden md:flex items-center gap-stack-lg">
+                <a class="font-label-bold text-label-bold text-on-surface hover:text-primary-container hover:scale-105 transition-all duration-300"
+                    href="#sobre">Sobre</a>
+                <a class="font-label-bold text-label-bold text-on-surface hover:text-primary-container hover:scale-105 transition-all duration-300"
+                    href="#equipamentos">Equipamentos</a>
+                <a class="font-label-bold text-label-bold text-on-surface hover:text-primary-container hover:scale-105 transition-all duration-300"
+                    href="#planos">Planos</a>
+                <a class="font-label-bold text-label-bold text-on-surface hover:text-primary-container hover:scale-105 transition-all duration-300"
+                    href="#faq">FAQ</a>
+                <a class="font-label-bold text-label-bold bg-primary-container text-background uppercase px-6 py-3 rounded hover:scale-105 active:scale-95 transition-all duration-150 shadow-[0_0_15px_rgba(250,204,21,0.2)]"
+                    href="#agendar">
+                    Agendar Aula
+                </a>
+            </div>
+            <button class="md:hidden text-on-surface hover:text-primary-container transition-colors"
+                id="mobile-menu-btn">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">menu</span>
+            </button>
+        </div>
+        <div class="md:hidden hidden absolute top-full left-0 w-full bg-surface-container-highest border-b border-white/10"
+            id="mobile-menu">
+            <div class="flex flex-col p-4 gap-4">
+                <a class="font-label-bold text-label-bold text-on-surface p-2" href="#sobre">Sobre</a>
+                <a class="font-label-bold text-label-bold text-on-surface p-2" href="#equipamentos">Equipamentos</a>
+                <a class="font-label-bold text-label-bold text-on-surface p-2" href="#planos">Planos</a>
+                <a class="font-label-bold text-label-bold text-on-surface p-2" href="#faq">FAQ</a>
+                <a class="font-label-bold text-label-bold bg-primary-container text-background uppercase px-4 py-3 rounded text-center"
+                    href="#agendar">Agendar Aula</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Floating WhatsApp Button -->
+    <a class="fixed bottom-6 right-6 z-50 bg-primary-container text-background p-4 rounded-full shadow-[0_0_20px_rgba(250,204,21,0.3)] hover:scale-110 transition-transform duration-300 flex items-center justify-center"
+        href="#">
+        <span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">chat</span>
+    </a>
+    <!-- Hero Section -->
+    <section class="relative min-h-[90vh] flex items-center justify-center w-full overflow-hidden">
+        <div class="absolute inset-0 w-full h-full bg-cover bg-center"
+            data-alt="A cinematic, wide-angle shot of a premium, high-end gym facility known as Kinetic Elite."
+            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAmsa_2xmtRMmujsD9S9koOYcNuVYqCHn4v_1quv8h_Q-cKBe_so2DThk7mOG4DiCysbaKm7CcNBtwLVyMJwCfgzj1Y3QqZaWvfkViH6OaW-7NMjMcWFtQTgnruZKqCeRSob2ejX0YcpTz9D57OGyF61cS_caA4Cs_rgf31Zfl5cThFDdRiqbLimbsUxifQGiw8pDwcLGKOsufzX-a9Ql3XFqzMDp5W7dODB572p2JbJjWcLn2bf0ZBjJL9EonT3-nyzPcrIV107SVb')">
+        </div>
+        <div class="absolute inset-0 bg-background/80"></div>
+        <div
+            class="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col items-center">
+            <h1
+                class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-on-background mb-stack-md uppercase reveal">
+                FORÇA QUE <span class="text-primary-container">TRANSFORMA</span>
+            </h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg max-w-2xl reveal delay-100">
+                Treine em uma estrutura de elite com acompanhamento profissional e tecnologia de ponta.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto reveal delay-200">
+                <a class="font-label-bold text-label-bold bg-primary-container text-background uppercase px-8 py-4 rounded hover:scale-105 active:scale-95 transition-all duration-150 shadow-[0_0_15px_rgba(250,204,21,0.2)] text-center"
+                    href="#planos">
+                    Agende sua Aula Experimental
+                </a>
+                <a class="font-label-bold text-label-bold bg-transparent border-2 border-white/30 text-on-surface uppercase px-8 py-4 rounded hover:bg-white/5 hover:border-white hover:scale-105 active:scale-95 transition-all duration-150 text-center flex items-center justify-center gap-2"
+                    href="#">
+                    <span class="material-symbols-outlined"
+                        style="font-variation-settings: 'FILL' 1;">phone_iphone</span>
+                    Falar no WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Equipamentos Section -->
+    <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="equipamentos">
+        <div class="text-center mb-stack-lg reveal">
+            <h2 class="font-display-xl-mobile md:font-headline-lg text-primary-container uppercase mb-4">TECNOLOGIA DE
+                PONTA</h2>
+            <p class="text-on-surface-variant max-w-2xl mx-auto">Equipamentos das melhores marcas mundiais para garantir
+                a máxima performance e segurança em seus treinos.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+            <div class="relative h-[400px] rounded-xl overflow-hidden group reveal">
+                <img alt="Equipamentos Matrix"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqfCLdj5laRIo5i26z_LFxRIw4ddAGJThM_QKhO4DmYL84ZlJm_J2-dC97HkiJR50mk6Rl6tO1ukK9V0ZTtVjEaykoB1q7KgNd3mSFklA6cgI3vIizN8YgXZr7fV9KBiHRlLuDYESb0S2sCHuOIyajJB_TCaxRLfduCrPY7jPuxoJlryKNQmCS9gHkGOs7rPnMw6ndPpMse_4Pk01Fcjp6_ucoftxu8b1LQ3UQPSdZpJyr8r57nt5Y-rYamu9qXDXyWQGxVOC_pPJI" />
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-8">
+                    <h3 class="font-headline-lg-mobile text-primary-container uppercase">Linha Matrix</h3>
+                    <p class="text-on-surface">Ergonomia avançada e durabilidade extrema para atletas exigentes.</p>
+                </div>
+            </div>
+            <div class="relative h-[400px] rounded-xl overflow-hidden group reveal delay-100">
+                <img alt="Equipamentos Technogym"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoufaATa-kUvSHMUyUUISWC0qbPrUC0qs59HShPyx80s6No4rBMBTeCU966EotDMSlS59nv4T-OY3e0WfJg6vEEJ5rGW_M5EGr0qV5XO7lENwTHUowokrLom--9aKz0q6JWFoDEzbMfOMVlPLPToe6OIuzZmZnUwHWNhjlaOeNDRrDovsENlxwNJiUoGzcDDevebLC2CJuDWnL72Q_iiPdDBsYtkDSo43Bh1huO29xHnH-B80LjWKal4Hpd2ukW1L5gDBsCSHQvKXe" />
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-8">
+                    <h3 class="font-headline-lg-mobile text-primary-container uppercase">Linha Technogym</h3>
+                    <p class="text-on-surface">O padrão ouro em biomecânica e inovação digital no fitness.</p>
+                </div>
+            </div>
+        </div>
+        <div
+            class="flex flex-wrap justify-center items-center gap-12 mt-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-300">
+            <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-4xl">precision_manufacturing</span>
+                <span class="font-bold uppercase tracking-widest">MATRIX</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-4xl">bolt</span>
+                <span class="font-bold uppercase tracking-widest">TECHNOGYM</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-4xl">fitness_center</span>
+                <span class="font-bold uppercase tracking-widest">ROGUE</span>
+            </div>
+        </div>
+    </section>
+    <!-- Avaliação Física Section -->
+    <section class="py-section-gap bg-surface-container-low overflow-hidden">
+        <div
+            class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-stack-lg items-center">
+            <div class="reveal">
+                <h2 class="font-display-xl-mobile md:font-headline-lg text-primary-container uppercase mb-stack-md">
+                    AVALIAÇÃO DE RESULTADOS</h2>
+                <div class="space-y-6">
+                    <div class="flex gap-4">
+                        <div class="bg-primary-container/10 p-3 rounded-lg h-fit">
+                            <span class="material-symbols-outlined text-primary-container">monitoring</span>
+                        </div>
+                        <div>
+                            <h4 class="font-label-bold text-on-surface text-lg mb-2">Bioimpedância InBody</h4>
+                            <p class="text-on-surface-variant">Análise segmentada da composição corporal: gordura, massa
+                                muscular e hidratação com precisão médica.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="bg-primary-container/10 p-3 rounded-lg h-fit">
+                            <span class="material-symbols-outlined text-primary-container">person_celebrate</span>
+                        </div>
+                        <div>
+                            <h4 class="font-label-bold text-on-surface text-lg mb-2">Acompanhamento Consultivo</h4>
+                            <p class="text-on-surface-variant">Nossos especialistas interpretam seus dados para ajustar
+                                seu treino de forma dinâmica a cada 30 dias.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="bg-primary-container/10 p-3 rounded-lg h-fit">
+                            <span class="material-symbols-outlined text-primary-container">track_changes</span>
+                        </div>
+                        <div>
+                            <h4 class="font-label-bold text-on-surface text-lg mb-2">Metas Evolutivas</h4>
+                            <p class="text-on-surface-variant">Planejamento focado em objetivos reais, seja hipertrofia,
+                                emagrecimento ou performance atlética.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative reveal delay-200">
+                <div class="absolute inset-0 bg-primary-container/20 blur-3xl rounded-full"></div>
+                <img alt="Avaliação Física" class="relative z-10 rounded-2xl shadow-2xl border border-white/5"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbFUIZSSEVaDhCm_yIUM9UPayRwHAXUAelJagkYD6SbP1qXQvjCrv1OxYUbtNmyxgKiMcqXqnjS63yljEBHdPb0g28PRFy829zm-jLvPyjPx1v15VvN-sixXtQI9T3Bhk40AkFVGIEIuvCobTJJvtGIAHGr3oV3wnRH08SSfuQYXMf-ezHDcG4blQtfzkAeY2KB5Z3MgGRcCiW2kWJZpg1J-rm9LSEJuwK5RYrM1QgK1SNI9m-gHRkXsrv8c_HlanmhALh3M7FXr2R" />
+            </div>
+        </div>
+    </section>
+    <!-- Planos Section -->
+    <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="planos">
+        <div class="text-center mb-16 reveal">
+            <h2 class="font-display-xl-mobile md:font-headline-lg text-primary-container uppercase">PLANOS DE ELITE</h2>
+            <p class="text-on-surface-variant mt-4">Escolha o plano que melhor se adapta ao seu estilo de vida.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Mensal -->
+            <div
+                class="bg-surface-container-high p-8 rounded-2xl border border-white/5 flex flex-col hover:border-primary-container/50 transition-colors reveal">
+                <span class="font-label-bold text-on-surface-variant uppercase tracking-widest mb-2">Start</span>
+                <h3 class="text-3xl font-display-xl-mobile text-on-surface mb-4 uppercase">Mensal</h3>
+                <div class="flex items-baseline gap-1 mb-8">
+                    <span class="text-2xl font-bold text-primary-container">R$</span>
+                    <span class="text-5xl font-black text-primary-container">299</span>
+                    <span class="text-on-surface-variant">/mês</span>
+                </div>
+                <ul class="space-y-4 mb-10 flex-grow">
+                    <li class="flex items-center gap-3 text-on-surface-variant">
+                        <span class="material-symbols-outlined text-primary-container text-sm">check_circle</span>
+                        Acesso total à unidade
+                    </li>
+                    <li class="flex items-center gap-3 text-on-surface-variant">
+                        <span class="material-symbols-outlined text-primary-container text-sm">check_circle</span>
+                        Treino básico digital
+                    </li>
+                    <li class="flex items-center gap-3 text-on-surface-variant">
+                        <span class="material-symbols-outlined text-primary-container text-sm">check_circle</span>
+                        Armários rotativos
+                    </li>
+                </ul>
+                <a class="bg-white/5 text-on-surface text-center py-4 rounded-lg font-label-bold uppercase hover:bg-white/10 transition-colors"
+                    href="#">Solicitar Informações</a>
+            </div>
+            <!-- Trimestral - Destacado -->
+            <div
+                class="bg-surface-container-highest p-8 rounded-2xl border-2 border-primary-container flex flex-col relative scale-105 shadow-[0_0_30px_rgba(250,204,21,0.1)] reveal delay-100">
+                <div
+                    class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary-container text-background px-4 py-1 rounded-full text-xs font-black uppercase tracking-tighter">
+                    Mais Popular</div>
+                <span class="font-label-bold text-primary-container uppercase tracking-widest mb-2">Performance</span>
+                <h3 class="text-3xl font-display-xl-mobile text-on-surface mb-4 uppercase">Trimestral</h3>
+                <div class="flex items-baseline gap-1 mb-8">
+                    <span class="text-2xl font-bold text-primary-container">R$</span>
+                    <span class="text-5xl font-black text-primary-container">249</span>
+                    <span class="text-on-surface-variant">/mês</span>
+                </div>
+                <ul class="space-y-4 mb-10 flex-grow">
+                    <li class="flex items-center gap-3 text-on-surface">
+                        <span class="material-symbols-outlined text-primary-container text-sm">check_circle</span>
+                        Todos os benefícios Mensal
+                    </li>
+                    <li class="flex items-center gap-3 text-on-surface">
+                        <span class="material-symbols-outlined text-primary-container text-sm">check_circle</span>
+                        1 Avaliação Bioimpedância
+                    </li>
+                    <li class="flex items-center gap-3 text-on-surface">
+                        <span class="material-symbols-outlined text-primary-container text-sm">check_circle</span>
+                        Plano de treino personalizado
+                    </li>
+                    <li class="flex items-center gap-3 text-on-surface">
+                        <span class="material-symbols-outlined text-primary-container text-sm">check_circle</span>
+                        Acesso a aulas coletivas
+                    </li>
+                </ul>
+                <a class="bg-primary-container text-background text-center py-4 rounded-lg font-label-bold uppercase hover:brightness-110 transition-all shadow-[0_0_15px_rgba(250,204,21,0.3)]"
+                    href="#">Assinar Agora</a>
+            </div>
+            <!-- Anual -->
+            <div
+                class="bg-surface-container-high p-8 rounded-2xl border border-white/5 flex flex-col hover:border-primary-container/50 transition-colors reveal delay-200">
+                <span class="font-label-bold text-on-surface-variant uppercase tracking-widest mb-2">Exclusive</span>
+                <h3 class="text-3xl font-display-xl-mobile text-on-surface mb-4 uppercase">Anual</h3>
+                <div class="flex items-baseline gap-1 mb-8">
+                    <span class="text-2xl font-bold text-primary-container">R$</span>
+                    <span class="text-5xl font-black text-primary-container">199</span>
+                    <span class="text-on-surface-variant">/mês</span>
+                </div>
+                <ul class="space-y-4 mb-10 flex-grow">
+                    <li class="flex items-center gap-3 text-on-surface-variant">
+                        <span class="material-symbols-outlined text-primary-container text-sm">check_circle</span>
+                        Todos os benefícios Trimestral
+                    </li>
+                    <li class="flex items-center gap-3 text-on-surface-variant">
+                        <span class="material-symbols-outlined text-primary-container text-sm">check_circle</span>
+                        Bioimpedância trimestral
+                    </li>
+                    <li class="flex items-center gap-3 text-on-surface-variant">
+                        <span class="material-symbols-outlined text-primary-container text-sm">check_circle</span>
+                        Área VIP (Toalhas e Café)
+                    </li>
+                    <li class="flex items-center gap-3 text-on-surface-variant">
+                        <span class="material-symbols-outlined text-primary-container text-sm">check_circle</span>
+                        Isenção de taxa de matrícula
+                    </li>
+                </ul>
+                <a class="bg-white/5 text-on-surface text-center py-4 rounded-lg font-label-bold uppercase hover:bg-white/10 transition-colors"
+                    href="#">Solicitar Informações</a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest border-t border-white/10 full-width mt-section-gap">
+        <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto">
+            <div class="flex flex-col items-start gap-4">
+                <img alt="Kinetic Elite Logo"
+                    class="w-24 h-24 object-contain bg-surface-container-highest rounded-md p-2"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmLFiQZKXHMdCnCzwinskXTW1vGZWM4_zMrxSy8vMpRkqbZEO2FNRXXRMa3PTHsd41Os1Z82WKTDE_gFY1lVgRhKmtj5BHz4yicRnLBKhrUCGpHbXUB67vCcAwonAOUpGT92Sj6CHJv-dgOkIDa49N7pbPboZCgoek92jJzMhYte_n30j7RVOOTrVV_s3EqHjp21MBIPs95ASccjRh7DNuUqejpR7b7DU_RxuQ11l_xxeYp3QY8vSqlGoIniKo2uH4PmdOyyBqTs4H" />
+                <span class="font-headline-lg-mobile text-headline-lg-mobile text-primary-container uppercase">Kinetic
+                    Elite</span>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-xs">
+                    A estrutura de elite que você precisa para alcançar seus melhores resultados com acompanhamento
+                    premium.
+                </p>
+            </div>
+            <div class="flex flex-col gap-4">
+                <h4 class="font-label-bold text-label-bold text-primary-container uppercase">Links Rápidos</h4>
+                <div class="grid grid-cols-1 gap-2">
+                    <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container transition-colors"
+                        href="#sobre">Sobre Nós</a>
+                    <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container transition-colors"
+                        href="#equipamentos">Equipamentos</a>
+                    <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container transition-colors"
+                        href="#planos">Nossos Planos</a>
+                    <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container transition-colors"
+                        href="#">Trabalhe Conosco</a>
+                </div>
+            </div>
+            <div class="flex flex-col gap-4">
+                <h4 class="font-label-bold text-label-bold text-primary-container uppercase">Conecte-se</h4>
+                <div class="flex flex-col gap-3">
+                    <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container transition-colors flex items-center gap-2"
+                        href="#">
+                        <span class="material-symbols-outlined text-lg">call</span> Central WhatsApp: (11) 9999-0000
+                    </a>
+                    <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container transition-colors flex items-center gap-2"
+                        href="#">
+                        <span class="material-symbols-outlined text-lg">camera_alt</span> @kinetic.elite.gym
+                    </a>
+                    <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container transition-colors flex items-center gap-2"
+                        href="#">
+                        <span class="material-symbols-outlined text-lg">location_on</span> Av. Elite, 1000 - São Paulo,
+                        SP
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-white/5 py-6 text-center px-margin-mobile">
+            <p class="font-body-md text-body-md text-on-surface-variant text-sm">
+                © 2024 Kinetic Elite. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Sticky Nav Blur Effect
+        const nav = document.getElementById('main-nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+
+        // Scroll Reveal Animation
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal(); // Trigger on load
+    </script>
+</body>
+
+</html>

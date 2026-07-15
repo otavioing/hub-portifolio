@@ -68,6 +68,16 @@
             linkDemo: '/projetos/artesanato/index.html',
             linkModelo: '#',
         },
+        {
+            id: 'academia',
+            nome: 'Academia',
+            categoria: 'Academia',
+            descricao: 'Site institucional desenvolvido para uma academia, com informações sobre serviços, equipamentos e integração direta com o WhatsApp para atendimento.',
+            imagem: '/imgs/academia.png',
+            tecnologias: ['HTML', 'tailwindcss', 'JavaScript'],
+            linkDemo: '/projetos/academia/index.html',
+            linkModelo: '#',
+        },
     ];
 
     const projectState = {
